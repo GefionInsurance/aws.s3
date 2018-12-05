@@ -350,7 +350,7 @@ function(bucketname,
     path <- if (path == "") "/" else {
         paste(sapply(
             strsplit(path, '/')[[1]],
-            function(i) URLencode(i, TRUE),
+            function(i) URLencode(i),
             USE.NAMES = FALSE
         ), collapse = '/')
     }
